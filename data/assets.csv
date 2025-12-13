@@ -1,0 +1,6 @@
+host,ip_address,owner,criticality
+srv-1,10.0.0.1,Finance,5
+srv-2,10.0.0.2,Sales,3
+srv-3,10.0.0.3,Finance,4
+srv-4,10.0.0.4,Finance,2
+srv-5,10.0.0.5,HR,1
