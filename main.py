@@ -48,7 +48,7 @@ app = FastAPI(
 # CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # In production, replace with specific origins
+    allow_origins=allowed_origins,  # In production, replace with specific origins
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -1093,4 +1093,5 @@ async def update_alert_status(
         raise
     except Exception as e:
         logger.error(f"Error updating alert status: {str(e)}")
+
 
