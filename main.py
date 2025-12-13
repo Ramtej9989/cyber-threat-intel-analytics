@@ -1,3 +1,4 @@
+import time
 from fastapi import FastAPI, File, UploadFile, HTTPException, Depends, Query, Body, status
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
@@ -48,7 +49,9 @@ app = FastAPI(
 # CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=allowed_origins,  # In production, replace with specific origins
+    allow_origins=[
+    "http://localhost:3000",
+    "https://cyber-threat-intel-frontend-2qtmlzpse.vercel.app"],  # In production, replace with specific origins
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -1093,5 +1096,3 @@ async def update_alert_status(
         raise
     except Exception as e:
         logger.error(f"Error updating alert status: {str(e)}")
-
-
