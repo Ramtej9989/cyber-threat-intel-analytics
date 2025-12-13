@@ -16,6 +16,9 @@ from bson.objectid import ObjectId
 import uuid
 import hashlib
 from pydantic import BaseModel, Field
+from fastapi import FastAPI
+
+app = FastAPI()
 
 # Set up logging
 logging.basicConfig(level=logging.INFO)
@@ -1090,3 +1093,4 @@ async def update_alert_status(
         raise
     except Exception as e:
         logger.error(f"Error updating alert status: {str(e)}")
+
