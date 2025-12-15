@@ -76,7 +76,7 @@ PYTHON_VERSION=3.11.9
 MONGODB_URI=your_mongodb_connection_string  
 MONGODB_DB=soc_platform  
 API_KEY=your_secure_api_key  
-FRONTEND_URL=https://cyber-threat-intel-frontend-2qtmlzpse.vercel.app  
+FRONTEND_URL=https://cyber-threat-intel-frontend.vercel.app
 
 ---
 
